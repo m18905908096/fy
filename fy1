@@ -1,12 +1,12 @@
 zh:
-  project_module_custom_workflows_module: "自定义工作流程"
-  permission_manage_project_workflow: "管理项目自定义工作流程"
+  project_module_custom_workflows_module: "定制工作区流程"
+  permission_manage_project_workflow: "管理工作区流程"
 
-  label_custom_workflow: "自定义工作流程"
-  label_custom_workflow_plural: "自定义工作流程"
-  label_custom_workflow_new: "创建自定义工作流程"
+  label_custom_workflow: "定制工作区流程"
+  label_custom_workflow_plural: "定制工作区流程"
+  label_custom_workflow_new: "创建工作区流程"
   label_workflow_scripts: "工作流脚本"
-  label_enabled_projects: "为项目启用"
+  label_enabled_projects: "为工作区启用"
   label_custom_workflow_export: "导出"
   label_custom_workflow_import: "导入工作流程"
   label_save_workflows: "保存可观察对象"
@@ -29,57 +29,57 @@ zh:
   field_shared_code: "共享代码"
   field_observable: "可观察对象"
   field_is_enabled: "已启用"
-  field_enabled_for_all_projects: "为所有项目启用"
+  field_enabled_for_all_projects: "为所有工作区启用"
   field_custom_workflow_author: "作者的电子邮件"
   field_custom_workflow_file: "选择以前导出的XML文件进程"
   field_custom_workflow_active: "有效"
   field_custom_workflow:
     script: "工作流脚本"
 
-  notice_successful_import: "自定义工作流程已成功导入"
+  notice_successful_import: "定制工作区流程已成功导入"
   notice_successful_status_change: "状态已成功更改"
-  error_failed_import: "导入自定义工作流程时出错（未知格式？请参阅日志）"
+  error_failed_import: "导入定制工作区流程时出错（未知格式？请参阅日志）"
 
   activerecord:
     errors:
       messages:
         invalid_script: "包含错误：％{error}"
-        custom_workflow_error: "自定义工作流程错误（请联系管理员）"
+        custom_workflow_error: "定制工作区流程错误（请联系管理员）"
         new_status_invalid: "禁止从'％{old_status}'过渡到'％{new_status}"
         scripts_absent: "至少应该定义一个脚本"
 
-  text_select_project_custom_workflows: 选择项目自定义工作流程
-  text_custom_workflow_before_save_note: 您可以在此处更改问题的属性。请勿在此脚本中创建或更新相关问题。要完成错误，请使用raise WorkflowError， "Message to user"。
-  text_custom_workflow_after_save_note: 您可以在此处更新或创建相关问题。请注意，此脚本也将针对新创建的问题执行。因此，进行适当的检查以防止无限递归。
-  text_custom_workflow_issue_code_note:脚本在Issue对象的上下文中执行，如普通的before_save和after_save回调。因此，直接（或通过“自我”）使用问题的方法和属性。实例变量（@variable）也是允许的，如果需要可以使用。
-  text_custom_workflow_shared_code_note:此代码将在任何其他工作流程之前运行，并且可能包含共享代码，例如其他工作流程所需的功能和类
+  text_select_project_custom_workflows: 选择工作区流程
+  text_custom_workflow_before_save_note: 您可以在此处更改信息项的属性。请勿在此脚本中创建或更新相关信息项。要完成错误，请使用raise WorkflowError， "Message to user"。
+  text_custom_workflow_after_save_note: 您可以在此处更新或创建相关信息项。请注意，此脚本也将针对新创建的信息项执行。因此，进行适当的检查以防止无限递归。
+  text_custom_workflow_issue_code_note: 脚本在Issue对象的上下文中执行，如普通的before_save和after_save回调。因此，直接（或通过“自我”）使用信息项的方法和属性。实例变量（@variable）也是允许的，如果需要可以使用。
+  text_custom_workflow_shared_code_note: 此代码将在任何其他工作流程之前运行，并且可能包含共享代码，例如其他工作流程所需的功能和类
   text_custom_workflow_user_code_note: 当用户对象发生更改（销毁）时，脚本在User对象的上下文中执行。直接使用用户的方法和属性（或通过“自我”）
   text_custom_workflow_group_code_note: 当组对象更改（销毁）时，脚本在Group对象的上下文中执行。直接使用组的方法和属性（或通过“自我”）
   text_custom_workflow_group_users_code_note: 当用户被添加到组/从组中删除时，将执行这些脚本。使用变量@user和@group访问脚本中的相应对象。
-  text_custom_workflow_attachment_code_note：当附件对象更改（销毁）时，脚本在Attachment对象的上下文中执行。直接使用附件对象的方法和属性（或通过“自我”）。请注意，这些脚本会影响所有附件类型（问题，文档，维基页面等），因此您应在脚本中另外检查“container_type”字段，或选择特定的“...附件”可观察对象。
-  text_custom_workflow_issue_attachments_code_note：当附件被添加到发布/删除问题时，将执行这些脚本。使用变量@issue和@attachment访问脚本中的相应对象。
-  text_custom_workflow_project_code_note：当项目对象发生更改（销毁）时，脚本在Project对象的上下文中执行。直接使用项目的方法和属性（或通过“自我”）
-  text_custom_workflow_project_attachments_code_note：当文件被添加到项目/从项目中删除时，将执行这些脚本。使用变量@project和@attachment访问脚本中的相应对象。
-  text_custom_workflow_wiki_content_code_note：当项目对象发生变化（销毁）时，脚本在Wiki Content对象的上下文中执行。直接使用项目的方法和属性（或通过“自我”）
+  text_custom_workflow_attachment_code_note：当附件对象更改（销毁）时，脚本在Attachment对象的上下文中执行。直接使用附件对象的方法和属性（或通过“自我”）。请注意，这些脚本会影响所有附件类型（信息项，文档，维基页面等），因此您应在脚本中另外检查“container_type”字段，或选择特定的“...附件”可观察对象。
+  text_custom_workflow_issue_attachments_code_note：当附件被添加到发布/删除信息项时，将执行这些脚本。使用变量@issue和@attachment访问脚本中的相应对象。
+  text_custom_workflow_project_code_note：当工作区对象发生更改（销毁）时，脚本在Project对象的上下文中执行。直接使用工作区的方法和属性（或通过“自我”）
+  text_custom_workflow_project_attachments_code_note：当文件被添加到工作区/从工作区中删除时，将执行这些脚本。使用变量@project和@attachment访问脚本中的相应对象。
+  text_custom_workflow_wiki_content_code_note：当工作区对象发生变化（销毁）时，脚本在Wiki Content对象的上下文中执行。直接使用工作区的方法和属性（或通过“自我”）
   text_custom_workflow_wiki_page_attachments_code_note：当文件被添加到维基页面/从维基页面中删除时，将执行这些脚本。使用变量@page和@attachment访问脚本中的相应对象。
   text_custom_workflow_time_entry_code_note：当时间enty对象发生变化（销毁）时，脚本在TimeEntry对象的上下文中执行。直接使用时间条目的方法和属性（或通过“自我”）
   text_custom_workflow_version_code_note：当版本对象更改（销毁）时，脚本在Version对象的上下文中执行。直接使用版本的方法和属性（或通过“自我”）
 
-  text_no_enabled_projects：没有项目
+  text_no_enabled_projects：没有工作区
   text_custom_workflow_author：将包含在导出的XML中
   text_custom_workflow_disabled：由admin禁用
-  text_custom_workflow_is_for_all：为所有项目启用
+  text_custom_workflow_is_for_all：为所有工作区启用
 
   custom_workflow_observable_shared："<共享代码>"
-  custom_workflow_observable_issue："问题"
-  custom_workflow_observable_issue_attachments："问题附件"
-  custom_workflow_observable_group："组"
+  custom_workflow_observable_issue："信息项"
+  custom_workflow_observable_issue_attachments："信息项附件"
+  custom_workflow_observable_group："群组"
   custom_workflow_observable_user："用户"
   custom_workflow_observable_attachment："附件"
-  custom_workflow_observable_project："项目"
-  custom_workflow_observable_project_attachments："项目附件/文件"
+  custom_workflow_observable_project："工作区"
+  custom_workflow_observable_project_attachments："工作区附件/文件"
   custom_workflow_observable_wiki_content："Wiki内容"
   custom_workflow_observable_wiki_page_attachments："Wiki页面附件"
-  custom_workflow_observable_group_users："组用户"
+  custom_workflow_observable_group_users："群组用户"
   custom_workflow_observable_time_entry："时间输入"
   custom_workflow_observable_version："版本"
